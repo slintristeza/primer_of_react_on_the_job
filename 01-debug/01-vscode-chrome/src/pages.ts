@@ -18,11 +18,11 @@ const pages = {
   },
   companies: {
     index: {
-      path: '/compnanies',
+      path: '/companies',
       title: 'いろんな会社のメンバー',
     },
     members: {
-      path: '/:compnayName/members',
+      path: '/:companyName/members',
       title: '%s のメンバー',
     },
   },
