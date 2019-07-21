@@ -12,7 +12,7 @@ import Spinner from '../common/Spinner';
 import './Members.css';
 
 export interface CompanyMembersProps {
-  compnayName: string;
+  companyName: string;
   users: User[];
   isLoading?: boolean;
 }
