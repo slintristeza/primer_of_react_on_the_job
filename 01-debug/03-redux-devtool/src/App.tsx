@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { FC } from 'react';
+import { Helmet } from 'react-helmet';
+import { Redirect, Route, Switch } from 'react-router';
+
+import pages from './pages';
+import Home from './components/Home';
+import Companies from './components/Companies';
+import CompanyMembers from './containers/Companies/Members';
+
 import './App.css';
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const title = 'GitHub API デモアプリ';
+
+const App: FC = () => (
+  <>
+    <Helmet htmlAttributes={{ lang: 'ja' }}>
+      <title>{title}</title>
+    </Helmet>
+
+    <header className="App-header">
+      <h1>{title}</h1>
+    </header>
+    <Switch>
+      <Route path="/" component={Home} exact />
+      <Route path={pages.companies.members.path} components={CompanyMembers} />
+      <Route path={pages.companies.index.path} componnet={Companies} />
+      <Redirect to="/" />
+    </Switch>
+  </>
+);
 
 export default App;
