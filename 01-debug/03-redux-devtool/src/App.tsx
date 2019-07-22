@@ -23,8 +23,8 @@ const App: FC = () => (
     </header>
     <Switch>
       <Route path="/" component={Home} exact />
-      <Route path={pages.companies.members.path} components={CompanyMembers} />
-      <Route path={pages.companies.index.path} componnet={Companies} />
+      <Route path={pages.companies.members.path} component={CompanyMembers} />
+      <Route path={pages.companies.index.path} component={Companies} />
       <Route
         path={pages.repositories.search.path}
         component={RepositorySearch}
