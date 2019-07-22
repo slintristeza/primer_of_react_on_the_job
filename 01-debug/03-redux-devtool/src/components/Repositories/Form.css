@@ -1,0 +1,9 @@
+.repository-from {
+  margin: 2em 0 4em;
+  text-align: center;
+}
+
+.repository-from > .ui.input {
+  margin: 0.5em;
+  width: 30em;
+}
