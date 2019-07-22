@@ -38,7 +38,7 @@ const CompanyMembers: FC<CompanyMembersProps> = ({
                 <Card.Content>
                   <Image floated="right" size="mini" src={user.avatarUrl} />
                   <Card.Header>{user.login}</Card.Header>
-                  <Card.Meta>Github ID: {user.id}</Card.Meta>
+                  <Card.Meta>GitHub ID: {user.id}</Card.Meta>
                 </Card.Content>
               </Card>
             ))}
