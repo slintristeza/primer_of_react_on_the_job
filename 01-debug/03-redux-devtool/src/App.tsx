@@ -6,6 +6,7 @@ import pages from './pages';
 import Home from './components/Home';
 import Companies from './components/Companies';
 import CompanyMembers from './containers/Companies/Members';
+import RepositorySearch from './components/Repositories/Search';
 
 import './App.css';
 
@@ -24,6 +25,10 @@ const App: FC = () => (
       <Route path="/" component={Home} exact />
       <Route path={pages.companies.members.path} components={CompanyMembers} />
       <Route path={pages.companies.index.path} componnet={Companies} />
+      <Route
+        path={pages.repositories.search.path}
+        component={RepositorySearch}
+      />
       <Redirect to="/" />
     </Switch>
   </>
