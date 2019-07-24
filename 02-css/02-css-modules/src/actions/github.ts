@@ -63,4 +63,4 @@ export type GithubAction =
   | ReturnType<typeof getMembers.fail>
   | ReturnType<typeof searchRepositories.start>
   | ReturnType<typeof searchRepositories.succeed>
-  | ReturnType<typeof getMembers.fail>;
+  | ReturnType<typeof searchRepositories.fail>;
