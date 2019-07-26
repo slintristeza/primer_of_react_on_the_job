@@ -10,7 +10,7 @@ interface ApiConfig {
 }
 
 const DEFAULT_API_CONFIG: ApiConfig = {
-  baseURL: 'https:api.github.com',
+  baseURL: 'https://api.github.com',
   timeout: 7000,
 };
 
@@ -31,9 +31,9 @@ const createAxiosInstance = (optionConfig?: ApiConfig) => {
 export const getMembersFactory = (optionConfig?: ApiConfig) => {
   const instance = createAxiosInstance(optionConfig);
 
-  const getMembers = async (orientationName: string) => {
+  const getMembers = async (organizationName: string) => {
     try {
-      const response = await instance.get(`/orgs/${orientationName}/members`);
+      const response = await instance.get(`/orgs/${organizationName}/members`);
 
       if (response.status !== 200) {
         throw new Error('Server Error');
