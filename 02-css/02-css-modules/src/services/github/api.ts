@@ -10,11 +10,11 @@ interface ApiConfig {
 }
 
 const DEFAULT_API_CONFIG: ApiConfig = {
-  baseURL: 'htttps:api.github.com',
+  baseURL: 'https:api.github.com',
   timeout: 7000,
 };
 
-const createAxiosInstace = (optionConfig?: ApiConfig) => {
+const createAxiosInstance = (optionConfig?: ApiConfig) => {
   const config = {
     ...DEFAULT_API_CONFIG,
     ...optionConfig,
@@ -29,7 +29,7 @@ const createAxiosInstace = (optionConfig?: ApiConfig) => {
 };
 
 export const getMembersFactory = (optionConfig?: ApiConfig) => {
-  const instance = createAxiosInstace(optionConfig);
+  const instance = createAxiosInstance(optionConfig);
 
   const getMembers = async (orientationName: string) => {
     try {
@@ -50,7 +50,7 @@ export const getMembersFactory = (optionConfig?: ApiConfig) => {
 };
 
 export const searchRepositoriesFactory = (optionConfig?: ApiConfig) => {
-  const instance = createAxiosInstace(optionConfig);
+  const instance = createAxiosInstance(optionConfig);
 
   const searchRepositories = async (
     q: string,
