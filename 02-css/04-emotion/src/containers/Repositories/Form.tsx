@@ -35,7 +35,7 @@ const mapDispatchToProps = (dispatch: Dispatch): DispatchProps =>
     dispatch,
   );
 
-const RepositoryFormContainer: FC<EnhancedRepositoryListProps> = ({
+const RepositoryFormContainer: FC<EnhancedRepositorySearchProps> = ({
   isLoading,
   searchRepositoriesStart,
 }) => {
