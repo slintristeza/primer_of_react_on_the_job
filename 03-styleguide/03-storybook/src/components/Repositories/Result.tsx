@@ -6,12 +6,12 @@ import RepositoryList from '../common/RepositoryList';
 import Spinner from '../common/Spinner';
 import { Repository } from '../../services/github/models';
 
-export interface RepositoryFormProps {
+export interface RepositoryResultProps {
   repositories?: Repository[];
   isLoading?: boolean;
 }
 
-const RepositoryResult: FC<RepositoryFormProps> = ({
+const RepositoryResult: FC<RepositoryResultProps> = ({
   repositories = [],
   isLoading = false,
 }) => (
