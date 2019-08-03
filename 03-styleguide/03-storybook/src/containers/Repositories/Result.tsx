@@ -14,14 +14,14 @@ interface StateProps {
   isLoading: boolean;
 }
 
-type EnhancedRepositorySearchProps = RepositoryResultProps & StateProps;
+type EnhancedRepositoryResultProps = RepositoryResultProps & StateProps;
 
 const mapStateToProps = (state: GithubState): StateProps => ({
   repositories: state.repositories,
   isLoading: state.isLoading,
 });
 
-const RepositoryResultContainer: FC<EnhancedRepositorySearchProps> = ({
+const RepositoryResultContainer: FC<EnhancedRepositoryResultProps> = ({
   repositories,
   isLoading,
 }) => <RepositoriesSearch repositories={repositories} isLoading={isLoading} />;

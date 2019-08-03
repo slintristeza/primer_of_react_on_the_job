@@ -39,7 +39,7 @@ const mapDispatchToProps = (dispatch: Dispatch): DispatchProps =>
     dispatch,
   );
 
-const ComapanyMebersContainer: FC<EnhancedCompanyMembersProps> = ({
+const CompanyMembersContainer: FC<EnhancedCompanyMembersProps> = ({
   users,
   isLoading,
   getMembersStart,
@@ -64,5 +64,5 @@ export default withRouter(
   connect(
     mapStateToProps,
     mapDispatchToProps,
-  )(ComapanyMebersContainer),
+  )(CompanyMembersContainer),
 );
