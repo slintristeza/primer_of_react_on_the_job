@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/** @jsx jsx */
+import React, { FC } from 'react';
+import { css, jsx } from '@emotion/core';
+import { Helmet } from 'react-helmet';
+import { Redirect, Route, Switch } from 'react-router';
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import pages from './pages';
+import Home from './components/Home';
+import Companies from './components/Companies';
+import CompanyMembers from './containers/Companies/Members';
+
+const appHeader = css`
+  background-color: #222;
+  color: white;
+  margin-bottom: 4em;
+  padding: 20px;
+  text-align: center;
+`;
+const title = 'GitHub API デモアプリ';
+
+const App: FC = () => (
+  <div>
+    <Helmet htmlAttributes={{ lang: 'ja' }}>
+      <title>{title}</title>
+    </Helmet>
+
+    <header css={appHeader}>
+      <h1>{title}</h1>
+    </header>
+    <Switch>
+      <Route path="/" component={Home} exact />
+      <Route path={pages.companies.members.path} component={CompanyMembers} />
+      <Route path={pages.companies.index.path} component={Companies} />
+      <Redirect to="/" />
+    </Switch>
+  </div>
+);
 
 export default App;
