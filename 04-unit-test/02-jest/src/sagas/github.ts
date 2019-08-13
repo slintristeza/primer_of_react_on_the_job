@@ -37,7 +37,7 @@ function* runSearchRepositories(
 }
 
 export function* watchSearchRepositories() {
-  yield takeLatest(Action.GET_MEMBERS_START, runSearchRepositories);
+  yield takeLatest(Action.SEARCH_REPOSITORIES_START, runSearchRepositories);
 }
 
 export default function* rootSaga() {

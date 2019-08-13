@@ -1,8 +1,16 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "plugins": [{"name": "css-module-types"}],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "plugins": [
+      {
+        "name": "css-module-types"
+      }
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -18,9 +26,13 @@
     "tsBuildInfoFile": "./buildcache/tsbuildinfo",
     "jsx": "preserve",
     "outDir": "build",
-    "rootDirs": ["src"]
+    "rootDirs": [
+      "src"
+    ]
   },
-  "include": ["src"],
+  "include": [
+    "src"
+  ],
   "exclude": [
     "node_modules",
     "build",

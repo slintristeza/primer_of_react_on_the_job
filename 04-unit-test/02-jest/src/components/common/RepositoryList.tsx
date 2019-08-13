@@ -11,7 +11,7 @@ const stats = css`
 `;
 
 export interface RepositoryListProps {
-  repositories?: Repository[];
+  repositories: Repository[];
 }
 
 const RepositoryList: FC<RepositoryListProps> = ({ repositories = [] }) => (
@@ -26,7 +26,7 @@ const RepositoryList: FC<RepositoryListProps> = ({ repositories = [] }) => (
           </Card.Meta>
           <Card.Description>{repo.description}</Card.Description>
         </Card.Content>
-        <Card.Content extar>
+        <Card.Content extra>
           <span css={stats}>
             <Icon name="star" />
             {repo.stargazersCount}
