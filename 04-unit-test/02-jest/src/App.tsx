@@ -8,6 +8,7 @@ import pages from './pages';
 import Home from './components/Home';
 import Companies from './components/Companies';
 import CompanyMembers from './containers/Companies/Members';
+import RepositorySearch from './components/Repositories/Search';
 
 const appHeader = css`
   background-color: #222;
@@ -31,6 +32,10 @@ const App: FC = () => (
       <Route path="/" component={Home} exact />
       <Route path={pages.companies.members.path} component={CompanyMembers} />
       <Route path={pages.companies.index.path} component={Companies} />
+      <Route
+        path={pages.repositories.search.path}
+        component={RepositorySearch}
+      />
       <Redirect to="/" />
     </Switch>
   </div>
